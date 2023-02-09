@@ -12,6 +12,9 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.button {
+  @apply rounded-full border border-red-500 px-4 py-1 text-sm text-red-500 ring-red-200 drop-shadow-sm transition-colors hover:drop-shadow-xl focus:bg-red-500 focus:ring-4 focus:text-white hover:bg-red-500 hover:text-white font-semibold
 }

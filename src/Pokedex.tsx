@@ -1,17 +1,22 @@
 import usePokemonList from "./components/hooks/usePokemonList";
+import UpdateButton from "./components/updateButton";
 
 export default function Pokedex() {
   const pokemonList = usePokemonList();
 
-  if (typeof pokemonList === "undefined") {
-    return <div>loading...</div>;
-  }
+  // if (typeof pokemonList === "undefined") {
+  //   return <div>loading...</div>;
+  // }
 
   return (
-    <div className="text-center">
-      {pokemonList.map((pokemon) => (
-        <li key={pokemon.name}>{pokemon.name}</li>
-      ))}
-    </div>
+    <>
+      <UpdateButton />
+
+      <ul>
+        {pokemonList?.map((value) => (
+          <li>{value}</li>
+        ))}
+      </ul>
+    </>
   );
 }
